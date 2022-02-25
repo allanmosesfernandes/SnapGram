@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Add">
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageButton
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:id="@+id/backBtn"
+            android:background="@drawable/ic_back"/>
+
+        <ImageButton
+            android:id="@+id/nextBtn"
+            android:visibility="gone"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_next" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/descriptionET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:background="@android:color/transparent"
+        android:hint="Add something about this post"
+        android:minLines="12" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"
+        android:layout_below="@+id/descriptionET"
+        android:layout_margin="6dp"
+        android:id="@+id/view"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="250dp"
+        android:id="@+id/imageView"
+        android:contentDescription="@null"
+        android:layout_below="@+id/view"
+        android:background="@android:color/holo_blue_bright"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView" />
+
+
+</RelativeLayout>
